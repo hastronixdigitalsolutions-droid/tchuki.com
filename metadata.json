@@ -1,0 +1,8 @@
+{
+  "name": "Tchuki Group - Corporate Website & Management Portal",
+  "description": "Official corporate website and dynamic management platform for Tchuki Group, encompassing Tchuki Farms and Tchuki Digital with interactive ecosystem, business showcases, portfolio, and secure administration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
