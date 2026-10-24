@@ -206,3 +206,4 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onNavigate }) 
     </section>
   );
 };
+

@@ -54,7 +54,7 @@ export const ContactPage: React.FC = () => {
     <div className="relative pt-28 pb-24 min-h-screen overflow-hidden">
       {/* Thematic Background Photography & Ambient Hybrid Spotlight */}
       <PageBackdrop
-        imageUrl="/src/assets/images/tchuki_digital_studio_1792796708817.jpg"
+        imageUrl="/assets/tchuki_digital_studio_1792796708817.jpg"
         alt="Contact Tchuki Group"
         lighting="hybrid"
         opacityClass="opacity-45 dark:opacity-35"
@@ -343,3 +343,4 @@ export const ContactPage: React.FC = () => {
     </div>
   );
 };
+

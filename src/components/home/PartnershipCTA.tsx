@@ -54,3 +54,4 @@ export const PartnershipCTA: React.FC<PartnershipCTAProps> = ({ onNavigate }) =>
     </section>
   );
 };
+

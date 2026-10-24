@@ -35,7 +35,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
     <div className="relative pt-28 pb-24 min-h-screen overflow-hidden">
       {/* Thematic Background Photography & Ambient Blue Spotlight */}
       <PageBackdrop
-        imageUrl="/src/assets/images/tchuki_digital_studio_1792796708817.jpg"
+        imageUrl="/assets/tchuki_digital_studio_1792796708817.jpg"
         alt="Tchuki Digital & Agricultural Services"
         lighting="blue"
         opacityClass="opacity-45 dark:opacity-35"
@@ -266,3 +266,4 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
     </div>
   );
 };
+

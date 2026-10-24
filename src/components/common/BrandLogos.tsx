@@ -38,3 +38,4 @@ export const TchukiDigitalLogo: React.FC<LogoProps> = ({ className = 'h-12 w-aut
     />
   );
 };
+

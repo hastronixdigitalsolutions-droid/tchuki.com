@@ -100,3 +100,4 @@ export const ArticlesSection: React.FC<ArticlesSectionProps> = ({ onNavigate }) 
     </section>
   );
 };
+

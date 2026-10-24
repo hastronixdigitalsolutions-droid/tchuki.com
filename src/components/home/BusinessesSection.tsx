@@ -141,3 +141,4 @@ export const BusinessesSection: React.FC<BusinessesSectionProps> = ({ onNavigate
     </section>
   );
 };
+

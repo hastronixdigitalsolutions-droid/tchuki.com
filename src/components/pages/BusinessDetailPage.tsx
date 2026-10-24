@@ -119,8 +119,8 @@ export const BusinessDetailPage: React.FC<BusinessDetailPageProps> = ({
       <PageBackdrop
         imageUrl={
           isFarms
-            ? '/src/assets/images/tchuki_farms_seedlings_nursery_1792798452384.jpg'
-            : '/src/assets/images/tchuki_digital_studio_1792796708817.jpg'
+            ? '/assets/tchuki_farms_seedlings_nursery_1792798452384.jpg'
+            : '/assets/tchuki_digital_studio_1792796708817.jpg'
         }
         alt={`${business.name} Atmosphere`}
         lighting={isFarms ? 'emerald' : 'blue'}
@@ -537,3 +537,4 @@ export const BusinessDetailPage: React.FC<BusinessDetailPageProps> = ({
     </div>
   );
 };
+

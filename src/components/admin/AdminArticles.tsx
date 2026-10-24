@@ -24,7 +24,7 @@ export const AdminArticles: React.FC = () => {
         content: editingArt.content || '',
         cover_image_url:
           editingArt.cover_image_url ||
-          '/src/assets/images/hero_tchuki_agricultural_tech_1792796707277.jpg',
+          '/assets/hero_tchuki_agricultural_tech_1792796707277.jpg',
         category: editingArt.category || 'Strategic Perspective',
         author_name: editingArt.author_name || 'Tchuki Executive Team',
         read_time: editingArt.read_time || '4 min read',
@@ -57,7 +57,7 @@ export const AdminArticles: React.FC = () => {
               category: 'Agronomy Innovation',
               excerpt: '',
               content: '',
-              cover_image_url: '/src/assets/images/hero_tchuki_agricultural_tech_1792796707277.jpg',
+              cover_image_url: '/assets/hero_tchuki_agricultural_tech_1792796707277.jpg',
               author_name: 'Tchuki Team',
               read_time: '4 min read',
               publication_status: 'published',
@@ -261,3 +261,4 @@ export const AdminArticles: React.FC = () => {
     </div>
   );
 };
+

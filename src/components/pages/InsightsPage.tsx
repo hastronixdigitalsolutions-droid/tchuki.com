@@ -31,7 +31,7 @@ export const InsightsPage: React.FC<InsightsPageProps> = ({ initialSlug, onNavig
     <div className="relative pt-28 pb-24 min-h-screen overflow-hidden">
       {/* Thematic Background Photography & Warm Editorial Spotlight */}
       <PageBackdrop
-        imageUrl="/src/assets/images/hero_tchuki_agricultural_tech_1792796707277.jpg"
+        imageUrl="/assets/hero_tchuki_agricultural_tech_1792796707277.jpg"
         alt="Tchuki Insights and Editorial"
         lighting="warm"
         opacityClass="opacity-45 dark:opacity-35"
@@ -186,3 +186,4 @@ export const InsightsPage: React.FC<InsightsPageProps> = ({ initialSlug, onNavig
     </div>
   );
 };
+

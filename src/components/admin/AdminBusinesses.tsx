@@ -27,7 +27,7 @@ export const AdminBusinesses: React.FC = () => {
         full_description: editingBiz.full_description || '',
         logo_url: editingBiz.logo_url || '/assets/aistudio/Tchuki_Group_Eco-Tech_Logo_b371a75d.png',
         cover_image_url:
-          editingBiz.cover_image_url || '/src/assets/images/tchuki_farms_field_1792796708179.jpg',
+          editingBiz.cover_image_url || '/assets/tchuki_farms_field_1792796708179.jpg',
         brand_color: editingBiz.brand_color || '#10b981',
         email: editingBiz.email || 'tchukimediahouse@gmail.com',
         phone: editingBiz.phone || '+265 986 611 989',
@@ -359,3 +359,4 @@ export const AdminBusinesses: React.FC = () => {
     </div>
   );
 };
+

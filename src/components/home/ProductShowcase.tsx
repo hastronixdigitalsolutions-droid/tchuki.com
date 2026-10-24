@@ -295,3 +295,4 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onNavigate }) 
     </section>
   );
 };
+

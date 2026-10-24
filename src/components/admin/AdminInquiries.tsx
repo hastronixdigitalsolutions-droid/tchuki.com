@@ -299,3 +299,4 @@ export const AdminInquiries: React.FC = () => {
     </div>
   );
 };
+

@@ -158,3 +158,4 @@ export interface MediaAsset {
   size: string;
   uploaded_at: string;
 }
+

@@ -259,3 +259,4 @@ export const EcosystemSection: React.FC<EcosystemSectionProps> = ({ onNavigate }
     </section>
   );
 };
+

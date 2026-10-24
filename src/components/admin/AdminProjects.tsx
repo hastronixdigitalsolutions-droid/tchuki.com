@@ -23,7 +23,7 @@ export const AdminProjects: React.FC = () => {
         category: editingProj.category || 'Engineering',
         description: editingProj.description || '',
         cover_image_url:
-          editingProj.cover_image_url || '/src/assets/images/tchuki_farms_field_1792796708179.jpg',
+          editingProj.cover_image_url || '/assets/tchuki_farms_field_1792796708179.jpg',
         before_image_url: editingProj.before_image_url,
         after_image_url: editingProj.after_image_url,
         gallery_urls: editingProj.gallery_urls || [],
@@ -56,7 +56,7 @@ export const AdminProjects: React.FC = () => {
               slug: '',
               category: 'Sustainable Agronomy',
               description: '',
-              cover_image_url: '/src/assets/images/tchuki_farms_field_1792796708179.jpg',
+              cover_image_url: '/assets/tchuki_farms_field_1792796708179.jpg',
               project_status: 'completed',
               publication_status: 'published',
               metrics: [{ label: 'Performance Gain', value: '+35%' }],
@@ -243,7 +243,7 @@ export const AdminProjects: React.FC = () => {
                     onChange={(e) =>
                       setEditingProj({ ...editingProj, before_image_url: e.target.value })
                     }
-                    placeholder="/src/assets/images/..."
+                    placeholder="/assets/..."
                     className="w-full text-xs p-3 rounded-xl bg-slate-950 border border-slate-700 text-white focus:border-emerald-500 focus:outline-none font-mono"
                   />
                 </div>
@@ -258,7 +258,7 @@ export const AdminProjects: React.FC = () => {
                     onChange={(e) =>
                       setEditingProj({ ...editingProj, after_image_url: e.target.value })
                     }
-                    placeholder="/src/assets/images/..."
+                    placeholder="/assets/..."
                     className="w-full text-xs p-3 rounded-xl bg-slate-950 border border-slate-700 text-white focus:border-emerald-500 focus:outline-none font-mono"
                   />
                 </div>
@@ -286,3 +286,4 @@ export const AdminProjects: React.FC = () => {
     </div>
   );
 };
+

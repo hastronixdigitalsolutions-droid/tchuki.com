@@ -36,7 +36,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onScrollTo
     <section className="relative min-h-[92vh] flex items-center justify-center pt-24 pb-16 overflow-hidden">
       {/* Background Cinematic Imagery with Increased Capacity & Radiant Lighting */}
       <PageBackdrop
-        imageUrl="/src/assets/images/hero_tchuki_agricultural_tech_1792796707277.jpg"
+        imageUrl="/assets/hero_tchuki_agricultural_tech_1792796707277.jpg"
         alt="Tchuki Agriculture and Technology landscape"
         lighting="hybrid"
         opacityClass="opacity-50 dark:opacity-45"
@@ -229,3 +229,4 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onScrollTo
     </section>
   );
 };
+

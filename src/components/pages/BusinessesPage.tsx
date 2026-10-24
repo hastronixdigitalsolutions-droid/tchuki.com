@@ -14,7 +14,7 @@ export const BusinessesPage: React.FC<BusinessesPageProps> = ({ onNavigate }) =>
     <div className="relative pt-28 pb-24 min-h-screen overflow-hidden">
       {/* Thematic Background Photography with Emerald & Tech Lighting */}
       <PageBackdrop
-        imageUrl="/src/assets/images/tchuki_farms_seedlings_nursery_1792798452384.jpg"
+        imageUrl="/assets/tchuki_farms_seedlings_nursery_1792798452384.jpg"
         alt="Tchuki Business Operations"
         lighting="emerald"
         opacityClass="opacity-45 dark:opacity-35"
@@ -156,3 +156,4 @@ export const BusinessesPage: React.FC<BusinessesPageProps> = ({ onNavigate }) =>
     </div>
   );
 };
+

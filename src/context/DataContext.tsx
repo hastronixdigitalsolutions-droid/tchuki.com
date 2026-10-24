@@ -27,8 +27,8 @@ const STORAGE_KEY = 'tchuki_corporate_storage_v2';
 const LEGACY_ASSET_URLS: Record<string, string> = {
   '/assets/tchuki_farms_logo.svg': '/assets/tchuki_farms_logo.jpg',
   '/assets/tchuki_digital_logo.svg': '/assets/tchuki_digital_logo.png',
-  '/src/assets/images/biokash_50kg_bag_packshot_1792798452301.jpg': '/assets/biokash_50kg_bag.png',
-  '/src/assets/images/biokash_fertilizer_pack_1792796708484.jpg': '/assets/biokash_50kg_bag.png',
+  '/assets/biokash_50kg_bag_packshot_1792798452301.jpg': '/assets/biokash_50kg_bag.png',
+  '/assets/biokash_fertilizer_pack_1792796708484.jpg': '/assets/biokash_50kg_bag.png',
 };
 
 const LEGACY_FARM_SUMMARY =
@@ -53,8 +53,17 @@ const ADDED_FARM_FEATURES = [
 const LEGACY_BIOKASH_PROJECT_DESCRIPTION =
   'Controlled comparative trials showing root depth, crop thickness, and output differences between chemical inputs and BioKash Organic Fertilizer.';
 
-const normalizeAssetUrl = (url: string) => LEGACY_ASSET_URLS[url] || url;
-const normalizeAssetUrls = (urls: string[]) => [...new Set(urls.map(normalizeAssetUrl))];
+export const normalizeAssetUrl = (url: string) => {
+  if (!url) return '';
+  const mapped = LEGACY_ASSET_URLS[url] || url;
+  if (mapped.startsWith('http') || mapped.startsWith('data:')) return mapped;
+  const base = import.meta.env.BASE_URL || '/';
+  if (base !== '/' && mapped.startsWith('/assets/')) {
+    return `${base.replace(/\/$/, '')}${mapped}`;
+  }
+  return mapped;
+};
+export const normalizeAssetUrls = (urls: string[]) => [...new Set(urls.map(normalizeAssetUrl))];
 
 function appendMissingBySlug<T extends { slug: string }>(savedItems: T[], defaultItems: T[]) {
   const savedSlugs = new Set(savedItems.map((item) => item.slug));
@@ -502,3 +511,4 @@ export const useData = () => {
   }
   return context;
 };
+

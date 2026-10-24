@@ -24,7 +24,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({ onNavigate }) => {
     <div className="relative pt-28 pb-24 min-h-screen overflow-hidden">
       {/* Thematic Background Photography & Ambient Emerald Spotlight */}
       <PageBackdrop
-        imageUrl="/src/assets/images/tchuki_farms_field_1792796708179.jpg"
+        imageUrl="/assets/tchuki_farms_field_1792796708179.jpg"
         alt="Tchuki Execution & Projects"
         lighting="emerald"
         opacityClass="opacity-45 dark:opacity-35"
@@ -96,8 +96,8 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({ onNavigate }) => {
           </div>
 
           <BeforeAfterSlider
-            beforeImage="/src/assets/images/hero_tchuki_agricultural_tech_1792796707277.jpg"
-            afterImage="/src/assets/images/tchuki_farms_field_1792796708179.jpg"
+            beforeImage="/assets/hero_tchuki_agricultural_tech_1792796707277.jpg"
+            afterImage="/assets/tchuki_farms_field_1792796708179.jpg"
             beforeLabel="Pre-Irrigation Unregulated Yields"
             afterLabel="Commissioned Precision Drip Infrastructure"
           />
@@ -224,3 +224,4 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({ onNavigate }) => {
     </div>
   );
 };
+
