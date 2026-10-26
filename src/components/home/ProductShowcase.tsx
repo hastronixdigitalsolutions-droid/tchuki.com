@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowRight, CheckCircle2, ShieldCheck, Leaf, Sparkles, Send, X } from 'lucide-react';
 import { useData } from '../../context/DataContext';
+import { getAssetUrl } from '../../utils/assets';
 
 interface ProductShowcaseProps {
   onNavigate: (view: string, detailSlug?: string) => void;
@@ -85,7 +86,7 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onNavigate }) 
             <div className="lg:col-span-7 space-y-6 text-left">
               <div className="flex items-center gap-3">
                 <img
-                  src="/assets/tchuki_farms_logo.jpg"
+                  src={getAssetUrl('/assets/tchuki_farms_logo.jpg')}
                   alt="Tchuki Farms Logo"
                   className="h-10 w-auto object-contain"
                 />
@@ -209,7 +210,7 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onNavigate }) 
             <div className="lg:col-span-5 relative flex justify-center">
               <div className="relative w-full max-w-md aspect-square rounded-3xl overflow-hidden border border-slate-200 dark:border-emerald-900/40 bg-slate-950 shadow-2xl shadow-slate-200/50 dark:shadow-emerald-950/40 group">
                 <img
-                  src="/assets/tchuki-farms-livestock.jpg"
+                  src={getAssetUrl('/assets/tchuki-farms-livestock.jpg')}
                   alt="Tchuki Farms Livestock (Cattle, Goats, Sheep, Poultry)"
                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 />
@@ -239,7 +240,7 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onNavigate }) 
             <div className="lg:col-span-7 space-y-6 text-left">
               <div className="flex items-center gap-3">
                 <img
-                  src="/assets/tchuki_farms_logo.jpg"
+                  src={getAssetUrl('/assets/tchuki_farms_logo.jpg')}
                   alt="Tchuki Farms Logo"
                   className="h-10 w-auto object-contain"
                 />
@@ -321,7 +322,7 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onNavigate }) 
             <div className="lg:col-span-5 relative flex justify-center">
               <div className="relative w-full max-w-md aspect-square rounded-3xl overflow-hidden border border-slate-200 dark:border-emerald-900/40 bg-white shadow-2xl shadow-slate-200/50 dark:shadow-emerald-950/40 group">
                 <img
-                  src={biokash.image_urls[0] || '/assets/biokash_50kg_bag.png'}
+                  src={getAssetUrl(biokash.image_urls[0] || '/assets/biokash_50kg_bag.png')}
                   alt="BioKash Organic Fertilizer"
                   className="w-full h-full object-contain"
                 />
@@ -500,4 +501,3 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onNavigate }) 
     </section>
   );
 };
-

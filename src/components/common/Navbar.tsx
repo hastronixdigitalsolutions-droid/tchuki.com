@@ -3,6 +3,7 @@ import { ArrowUpRight, Menu, X, Shield, Phone, Sun, Moon } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import { useData } from '../../context/DataContext';
 import { useTheme } from '../../context/ThemeContext';
+import { getAssetUrl } from '../../utils/assets';
 
 interface NavbarProps {
   currentView: string;
@@ -75,7 +76,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentView, onNavigate }) => {
               aria-label="Tchuki Group Home"
             >
               <img
-                src="/assets/aistudio/Tchuki_Group_Eco-Tech_Logo_b371a75d.png"
+                src={getAssetUrl('/assets/aistudio/Tchuki_Group_Eco-Tech_Logo_b371a75d.png')}
                 alt="Tchuki Group Logo"
                 className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                 onError={(e) => {

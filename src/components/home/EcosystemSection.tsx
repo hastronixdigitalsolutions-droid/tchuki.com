@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ArrowRight, Sprout, Terminal, Plus, ShieldCheck } from 'lucide-react';
 import { useData } from '../../context/DataContext';
 import { Business } from '../../types';
+import { getAssetUrl } from '../../utils/assets';
 
 interface EcosystemSectionProps {
   onNavigate: (view: string, detailSlug?: string) => void;
@@ -98,7 +99,7 @@ export const EcosystemSection: React.FC<EcosystemSectionProps> = ({ onNavigate }
               >
                 <div className="flex items-center gap-3 mb-3">
                   <div className="w-11 h-11 rounded-xl bg-slate-100 dark:bg-slate-950 p-1 border border-slate-200 dark:border-emerald-700/50 flex items-center justify-center shrink-0">
-                    <img src="/assets/tchuki_farms_logo.jpg" alt="Tchuki Farms" className="w-full h-full object-contain" />
+                    <img src={getAssetUrl('/assets/tchuki_farms_logo.jpg')} alt="Tchuki Farms" className="w-full h-full object-contain" />
                   </div>
                   <div>
                     <h3 className="text-base font-bold text-slate-900 dark:text-white font-heading">{farms.name}</h3>
@@ -120,7 +121,7 @@ export const EcosystemSection: React.FC<EcosystemSectionProps> = ({ onNavigate }
               <div className="w-20 h-20 rounded-2xl bg-gradient-to-tr from-emerald-600 via-teal-500 to-blue-600 p-[2px] mb-3 shadow-lg group-hover:scale-105 transition-transform">
                 <div className="w-full h-full rounded-2xl bg-slate-50 dark:bg-slate-950 flex flex-col items-center justify-center p-2">
                   <img
-                    src="/assets/aistudio/Tchuki_Group_Eco-Tech_Logo_b371a75d.png"
+                    src={getAssetUrl('/assets/aistudio/Tchuki_Group_Eco-Tech_Logo_b371a75d.png')}
                     alt="Tchuki Group"
                     className="w-full h-full object-contain"
                   />
@@ -150,7 +151,7 @@ export const EcosystemSection: React.FC<EcosystemSectionProps> = ({ onNavigate }
               >
                 <div className="flex items-center gap-3 mb-3">
                   <div className="w-24 h-11 rounded-xl bg-slate-950 p-1 border border-blue-700/50 flex items-center justify-center shrink-0">
-                    <img src="/assets/tchuki_digital_logo.png" alt="Tchuki Digital" className="w-full h-full object-contain" />
+                    <img src={getAssetUrl('/assets/tchuki_digital_logo.png')} alt="Tchuki Digital" className="w-full h-full object-contain" />
                   </div>
                   <div>
                     <h3 className="text-base font-bold text-slate-900 dark:text-white font-heading">{digital.name}</h3>
@@ -259,4 +260,3 @@ export const EcosystemSection: React.FC<EcosystemSectionProps> = ({ onNavigate }
     </section>
   );
 };
-

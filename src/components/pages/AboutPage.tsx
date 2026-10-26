@@ -2,6 +2,7 @@ import React from 'react';
 import { ShieldCheck, Target, HeartHandshake, Sprout, Terminal, Globe, ArrowRight } from 'lucide-react';
 import { useData } from '../../context/DataContext';
 import { PageBackdrop } from '../common/PageBackdrop';
+import { getAssetUrl } from '../../utils/assets';
 
 interface AboutPageProps {
   onNavigate: (view: string, detailSlug?: string) => void;
@@ -61,7 +62,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
           <div className="lg:col-span-6 relative">
             <div className="rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-2xl relative">
               <img
-                src="/assets/aistudio/Tchuki_Corporate_Ecosystem_UI_Montage_628ed48e.png"
+                src={getAssetUrl('/assets/aistudio/Tchuki_Corporate_Ecosystem_UI_Montage_628ed48e.png')}
                 alt="Tchuki Group Ecosystem Montage"
                 className="w-full h-auto object-cover"
               />
@@ -162,4 +163,3 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
     </div>
   );
 };
-

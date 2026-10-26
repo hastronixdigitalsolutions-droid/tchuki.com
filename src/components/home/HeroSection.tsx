@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ArrowRight, ChevronDown, Sprout, Terminal, Sparkles } from 'lucide-react';
 import { useData } from '../../context/DataContext';
 import { PageBackdrop } from '../common/PageBackdrop';
+import { getAssetUrl } from '../../utils/assets';
 
 interface HeroSectionProps {
   onNavigate: (view: string, detailSlug?: string) => void;
@@ -135,7 +136,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onScrollTo
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex items-center gap-3">
                     <div className="w-12 h-12 rounded-xl bg-slate-100 dark:bg-slate-950 p-1.5 border border-slate-200 dark:border-emerald-700/40 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform shadow-inner">
-                      <img src="/assets/tchuki_farms_logo.jpg" alt="Tchuki Farms" className="w-full h-full object-contain" />
+                      <img src={getAssetUrl('/assets/tchuki_farms_logo.jpg')} alt="Tchuki Farms" className="w-full h-full object-contain" />
                     </div>
                     <div>
                       <h3 className="text-lg font-bold text-slate-900 group-hover:text-emerald-600 dark:text-white dark:group-hover:text-emerald-400 transition-colors font-heading">
@@ -177,7 +178,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onScrollTo
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex items-center gap-3">
                     <div className="w-24 h-12 rounded-xl bg-slate-950 p-1 border border-blue-700/40 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform shadow-inner">
-                      <img src="/assets/tchuki_digital_logo.png" alt="Tchuki Digital" className="w-full h-full object-contain" />
+                      <img src={getAssetUrl('/assets/tchuki_digital_logo.png')} alt="Tchuki Digital" className="w-full h-full object-contain" />
                     </div>
                     <div>
                       <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-600 dark:text-white dark:group-hover:text-blue-400 transition-colors font-heading">
@@ -229,4 +230,3 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onScrollTo
     </section>
   );
 };
-

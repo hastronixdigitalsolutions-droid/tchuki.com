@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTheme } from '../../context/ThemeContext';
+import { getAssetUrl } from '../../utils/assets';
 
 interface PageBackdropProps {
   imageUrl: string;
@@ -61,7 +62,7 @@ export const PageBackdrop: React.FC<PageBackdropProps> = ({
     <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
       {/* Background Image with increased capacity (opacity) */}
       <img
-        src={imageUrl}
+        src={getAssetUrl(imageUrl)}
         alt={alt}
         className={`w-full h-full object-cover object-center transform scale-105 transition-opacity duration-700 ${
           opacityClass || (isDark ? 'opacity-35' : 'opacity-20')

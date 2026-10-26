@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { getAssetUrl } from '../../utils/assets';
 import {
   LayoutDashboard,
   Building2,
@@ -117,7 +118,7 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({ onBackToPublic }) => {
       <div className="md:hidden flex items-center justify-between p-4 bg-slate-900 border-b border-slate-800 sticky top-0 z-40">
         <div className="flex items-center gap-2.5">
           <img
-            src="/assets/aistudio/Tchuki_Group_Eco-Tech_Logo_b371a75d.png"
+            src={getAssetUrl('/assets/aistudio/Tchuki_Group_Eco-Tech_Logo_b371a75d.png')}
             alt="Tchuki Group"
             className="h-7 w-auto object-contain"
           />
@@ -141,7 +142,7 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({ onBackToPublic }) => {
           {/* Logo / Brand Header */}
           <div className="flex items-center gap-3 pb-6 border-b border-slate-800 mb-6">
             <img
-              src="/assets/aistudio/Tchuki_Group_Eco-Tech_Logo_b371a75d.png"
+              src={getAssetUrl('/assets/aistudio/Tchuki_Group_Eco-Tech_Logo_b371a75d.png')}
               alt="Tchuki Group"
               className="h-9 w-auto object-contain shrink-0"
             />
@@ -250,4 +251,3 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({ onBackToPublic }) => {
     </div>
   );
 };
-

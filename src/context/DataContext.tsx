@@ -21,6 +21,7 @@ import {
   initialSiteSettings,
   initialMediaAssets,
 } from '../data/initialData';
+import { getAssetUrl } from '../utils/assets';
 
 const STORAGE_KEY = 'tchuki_corporate_storage_v2';
 
@@ -56,12 +57,7 @@ const LEGACY_BIOKASH_PROJECT_DESCRIPTION =
 export const normalizeAssetUrl = (url: string) => {
   if (!url) return '';
   const mapped = LEGACY_ASSET_URLS[url] || url;
-  if (mapped.startsWith('http') || mapped.startsWith('data:')) return mapped;
-  const base = import.meta.env.BASE_URL || '/';
-  if (base !== '/' && mapped.startsWith('/assets/')) {
-    return `${base.replace(/\/$/, '')}${mapped}`;
-  }
-  return mapped;
+  return getAssetUrl(mapped);
 };
 export const normalizeAssetUrls = (urls: string[]) => [...new Set(urls.map(normalizeAssetUrl))];
 
@@ -511,4 +507,3 @@ export const useData = () => {
   }
   return context;
 };
-

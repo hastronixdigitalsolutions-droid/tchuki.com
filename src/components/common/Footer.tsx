@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowUpRight, Phone, Mail, MessageSquare, Shield, Globe } from 'lucide-react';
 import { useData } from '../../context/DataContext';
+import { getAssetUrl } from '../../utils/assets';
 
 interface FooterProps {
   onNavigate: (view: string, detailSlug?: string) => void;
@@ -21,7 +22,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           <div className="lg:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
               <img
-                src="/assets/aistudio/Tchuki_Group_Eco-Tech_Logo_b371a75d.png"
+                src={getAssetUrl('/assets/aistudio/Tchuki_Group_Eco-Tech_Logo_b371a75d.png')}
                 alt="Tchuki Group"
                 className="h-10 w-auto object-contain"
                 onError={(e) => {
@@ -193,4 +194,3 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
     </footer>
   );
 };
-
